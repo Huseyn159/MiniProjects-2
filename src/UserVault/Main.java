@@ -26,7 +26,7 @@ public class Main {
                 case 2 -> {
                     auth.login();
 
-                    if (DataStore.currentUser != null) { // login uğurlu olubsa
+                    if (DataStore.currentUser != null) {
                         while (true) {
                             System.out.println("=== PROFILE MENU ===");
                             System.out.println("1. View Profile");
@@ -45,17 +45,17 @@ public class Main {
                                 case 4 -> {
                                     auth.logout();
                                     DataStore.saveData();
-                                    break; // daxili loopdan çıx
+                                    break;
                                 }
                                 default -> System.out.println("Invalid choice!");
                             }
 
-                            if (DataStore.currentUser == null) break; // logout olunduqdan sonra çıx
+                            if (DataStore.currentUser == null) break;
                         }
                     }
                 }
                 case 3 -> {
-                    DataStore.saveData(); // çıxarkən fayla yaz
+                    DataStore.saveData();
                     System.out.println("Goodbye!");
                     return;
                 }
